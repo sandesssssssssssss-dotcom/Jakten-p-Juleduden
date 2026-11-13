@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Tre Vise Dudsa - Jakten på Juleduden</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="snow"></canvas>
+
+    <div class="container">
+
+        <h1>De Tre Vise Dudsa</h1>
+        <p class="subtitle">"Hjelp Ronny, Glenn og Kjell med å finne Juleduden!"</p>
+
+        <form id="surveyForm">
+            
+            <div class="budget-simple-text">
+                <span> Kredittkort-budsjett: </span>
+                <span id="budgetText" class="budget-value">800 / 800 kr</span>
+            </div>
+
+            <div class="field">
+                <label class="field_title">1. Hva må gutta pakke i kofferten?</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <span class="checkbox-label-content">
+                            <input type="checkbox" name="gear" value="Grandiosa" data-price="80"> Frossen Grandiosa
+                        </span>
+                        <span class="item-price">80 kr</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <span class="checkbox-label-content">
+                            <input type="checkbox" name="gear" value="Gavekort på Biltema" data-price="400"> Gavekort på Biltema
+                        </span>
+                        <span class="item-price">400 kr</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <span class="checkbox-label-content">
+                            <input type="checkbox" name="gear" value="En boks Snus" data-price="100"> En boks snus (Gull & myrra)
+                        </span>
+                        <span class="item-price">100 kr</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <span class="checkbox-label-content">
+                            <input type="checkbox" name="gear" value="Sovepose" data-price="150"> Gammel sovepose
+                        </span>
+                        <span class="item-price">150 kr</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <span class="checkbox-label-content">
+                            <input type="checkbox" name="gear" value="Sandaler" data-price="250"> Sandaler til ørkenen
+                        </span>
+                        <span class="item-price">250 kr</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="destination" class="field_title">2. Hvor tror du de tre "vise" dudsa havner?</label>
+                <select id="destination" required>
+                    <option value="" disabled selected>Velg en destinasjon...</option>
+                    <option value="Betlehem">Betlehem (Med Orientekspressen)</option>
+                    <option value="Strømstad">Strømstad (Kjørte feil)</option>
+                    <option value="Midtøsten">Midtøsten (På kamel-rygg)</option>
+                    <option value="Australia">Australia (Misset stjerna)</option>
+                    <option value="Biltema-parkeringen">Biltema-parkeringen (Tom for strøm)</option>
+                </select>
+            </div>
+
+            <button type="submit" id="submitBtn">
+                <span class="spinner" id="btnSpinner"></span>
+                <span id="btnText">Send inn tips!</span>
+            </button>
+        </form>
+
+        <div id="resultBox" class="result">
+            <h3>God tur! 🎅🎸</h3>
+            <p><strong>Pakkeliste:</strong> <span id="sumGear"></span></p>
+            <p><strong>Gutta sin destinasjon:</strong> <span id="sumDest"></span></p>
+            <p style="margin-top: 15px; font-size: 12px; color: #f8f8f8; text-align: center;">
+                Svaret ditt er lagret! Vi får se om de finner stjerna på Google Maps...
+            </p>
+        </div>
+    </div>
+
+    <script src="nettside.js"></script>
+</body>
+</html>
